@@ -14,13 +14,15 @@ libqrcodegen = shared_library('libqrcodegen',
 libqrcodegen_dep = declare_dependency(include_directories: dirqrcodegen,
                                       link_with : libqrcodegen)
 
-subdir('native')
+#subdir('native')
 subdir('layout')
 subdir('ui')
 subdir('av')
+subdir('xlib')
 
 deps = [
   dependency('libsodium'),
+  dependency('threads'),
   libminini_dep,
   libqrcodegen_dep,
 ]
