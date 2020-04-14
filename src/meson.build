@@ -14,6 +14,14 @@ libqrcodegen = shared_library('libqrcodegen',
 libqrcodegen_dep = declare_dependency(include_directories: dirqrcodegen,
                                       link_with : libqrcodegen)
 
+dirstb = include_directories('../third-party/stb')
+libstb = shared_library('libstb',
+                        ['../third-party/stb/stb_image.h',
+                         '../third-party/stb/stb_image_write.h'],
+                        install : true)
+libstb_dep = declare_dependency(include_directories: dirstb,
+                                link_with : libstb)
+
 #subdir('native')
 subdir('layout')
 subdir('ui')
@@ -25,6 +33,7 @@ deps = [
   dependency('threads'),
   libminini_dep,
   libqrcodegen_dep,
+  libstb_dep,
 ]
 
 args = ['-Wall',
@@ -35,7 +44,8 @@ args = ['-Wall',
         '-Wformat=0',
         '-Wno-misleading-indentation',
         '-fno-strict-aliasing',
-        '-fPIC']
+        '-fPIC',
+        '-fno-common']
 
 src =  [
   'avatar.c',
