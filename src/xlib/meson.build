@@ -5,7 +5,6 @@ files = [
   'event.c',
   'filesys.c',
   'freetype.c',
-  'globals.c',
   'gtk.c',
   'main.c',
   'mmenu.c',

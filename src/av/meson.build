@@ -1,7 +1,6 @@
 files = [
   'utox_av.c',
   'audio.c',
-  'globals.c',
   'video.c',
   'filter_audio.c',
   ]

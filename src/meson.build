@@ -58,7 +58,6 @@ src =  [
   'filesys.c',
   'flist.c',
   'friend.c',
-  'globals.c',
   'groups.c',
   'inline_video.c',
   'logging.c',
@@ -77,7 +76,6 @@ src =  [
   'tox_callbacks.c',
   'ui.c',
   'ui_i18n.c',
-  'updater.c',
   'utox.c',
   'window.c',
 ]

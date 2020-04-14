@@ -3,7 +3,6 @@ files = [
   'contextmenu.c',
   'dropdown.c',
   'edit.c',
-  'globals.c',
   'scrollable.c',
   'svg.c',
   'switch.c',
